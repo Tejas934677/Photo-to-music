@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> 
+      
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #ff5d5d, 0 0 20px #ec6613, 0 0 30px #fb4614;
+    animation: floating 3s infinite ease-in-out, waveText 3s infinite alternate;
+}
+
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+
+
+audio {
+    width: 250px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(71, 181, 41, 0.8);
+    animation: bounceEffect 2s infinite alternate, glowEffect 2s infinite alternate;
+}
+
+
+@keyframes bounceEffect {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes glowEffect {
+    0% { box-shadow: 0 0 10px rgba(235, 220, 51, 0.6); }
+    100% { box-shadow: 0 0 25px rgb(233, 237, 14); }
+}
+
+
+audio::-webkit-media-controls-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+audio::-webkit-media-controls-play-button {
+    filter: drop-shadow(0 0 5px #ff007f);
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #ff00ff;
+}
+
+       
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>"hey you are so curious"</h1>
+<audio controls autoplay> <source src="audio.mp3"></audio>
+<h2>🦁</h2>
+</body>
+</html>
